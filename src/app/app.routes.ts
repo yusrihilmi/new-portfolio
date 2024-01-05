@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { WebProjectsComponent } from './web-projects/web-projects.component';
 import { FilterProjectsComponent } from './filter-projects/filter-projects.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 export const routes: Routes = [
     {
@@ -16,5 +17,8 @@ export const routes: Routes = [
     },
     {
         'path': 'filter-projects', component:FilterProjectsComponent
+    },
+    {
+        'path': 'social-media', component:SocialMediaComponent
     },
 ];
