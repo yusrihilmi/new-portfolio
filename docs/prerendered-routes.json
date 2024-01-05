@@ -1,5 +1,8 @@
 {
   "routes": [
-    "/"
+    "/",
+    "/about",
+    "/filter-projects",
+    "/web-projects"
   ]
 }
