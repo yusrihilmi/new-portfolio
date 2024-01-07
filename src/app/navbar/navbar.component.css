@@ -1,5 +1,5 @@
 .navigation-list a.active {
-    border-bottom: 2px solid #21ADA8;
+    border-bottom: 2px solid #21ada8;
     transition: border-bottom 0,3 ease, color 0,3 ease;
 }
 
@@ -8,9 +8,9 @@
     transition: border-bottom 0,3 ease, color 0,3 ease;
 }
 
-.navbar {
+/* .navbar {
     background-color: var(--navbar-scroll);
     transition: all 500ms ease;
     -webkit-box-shadow: var(--navbar-scroll-shadow);
     box-shadow: var(--navbar-scroll-shadow);
-  }
+  } */
