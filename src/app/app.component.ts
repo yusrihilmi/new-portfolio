@@ -14,4 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'new-portfolio';
+
+  onActive(){
+    window.scroll(0,0)
+  }
 }
