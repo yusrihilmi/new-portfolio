@@ -9,26 +9,26 @@ import { GreenchemComponent } from './greenchem/greenchem.component';
 
 export const routes: Routes = [
     {
-        'path': 'home','title': 'Home', component:HomeComponent
+        'path': 'home','title': 'YusriPortfolio | Home', component:HomeComponent
     },
     {
-        'path': 'about', 'title': 'About', component:AboutComponent
+        'path': 'about', 'title': 'YusriPortfolio | About', component:AboutComponent
     },
     {
-        'path': 'web-projects', 'title': 'Web Projects', component:WebProjectsComponent
+        'path': 'web-projects', 'title': 'YusriPortfolio | Web Projects', component:WebProjectsComponent
     },
     {
         'path': 'web-projects', children:[
             {
-                'path': 'greenchem', 'title': 'Web Projects | Greenchem', component: GreenchemComponent
+                'path': 'greenchem', 'title': 'YusriPortfolio | Web Projects | Greenchem', component: GreenchemComponent
             }
         ]
     },
     {
-        'path': 'filter-projects', 'title': 'Filter Projects', component:FilterProjectsComponent
+        'path': 'filter-projects', 'title': 'YusriPortfolio | Filter Projects', component:FilterProjectsComponent
     },
     {
-        'path': 'social-media', 'title': 'Social Media', component:SocialMediaComponent
+        'path': 'social-media', 'title': 'YusriPortfolio | Social Media', component:SocialMediaComponent
     },
     {
         'path': '', redirectTo: '/home', pathMatch: 'full'
