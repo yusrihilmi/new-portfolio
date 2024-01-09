@@ -1,0 +1,22 @@
+{
+    "abouts": [
+        {
+            "id": 1,
+            "icon": "fa-solid fa-laptop-code",
+            "title": "Frontend Development",
+            "description": "Experienced in handling project in scope of research and web development as a frontend developer. I have basic knowledge on Laravel framework, Vue JS, Angular, Tailwind or Bootstrap CSS, and Jquery to build an Website."
+        },
+        {
+            "id": 2,
+            "icon": "fa-solid fa-users",
+            "title": "User Experience",
+            "description": "Individuals who express a keen interest in the realm of User Experience (UX) within the context of website development dedicate their efforts to the creation of an optimal, efficient, and gratifying user experience."
+        },
+        {
+            "id": 3,
+            "icon": "fa-regular fa-object-group",
+            "title": "Web Design",
+            "description": "I find joy in the process of creating captivating, responsive user interfaces that cater to user needs. Creativity, a grasp of design principles, and proficiency in graphic design tools are key characteristics of individuals who enjoy in web design."
+        }
+    ]
+}

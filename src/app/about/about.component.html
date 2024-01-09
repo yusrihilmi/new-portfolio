@@ -1,36 +1,22 @@
 <section class="text-gray-600 body-font relative mt-[150px] lg:mt-[115px]">
+  
   <div class="container px-5 py-12 mx-auto flex flex-wrap">
     <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
       <img alt="feature" class="object-cover object-center h-full w-full" src="assets/img/about-profile.jpg">
     </div>
     <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-      <div class="flex flex-col mb-10 lg:items-start items-center">
-        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#99EEBB] text-white mb-5">
-          <i class="fa-solid fa-laptop-code"></i>
+      @for (item of abouts; track item.id) {
+        <div class="flex flex-col mb-10 lg:items-start items-center" >
+
+          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#99EEBB] text-white mb-5">
+            <i [class]="item.icon"></i>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-gray-900 text-lg title-font font-medium uppercase mb-3">{{item.title}}</h2>
+            <p class="leading-relaxed text-base">{{item.description}}</p>
+          </div>
         </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium uppercase mb-3">Frontend Development</h2>
-          <p class="leading-relaxed text-base">Experienced in handling project in scope of research and web development as a frontend developer. I have basic knowledge on Laravel framework, Vue JS, Angular, Tailwind or Bootstrap CSS, and Jquery to build an Website.</p>
-        </div>
-      </div>
-      <div class="flex flex-col mb-10 lg:items-start items-center">
-        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#99EEBB] text-white mb-5">
-          <i class="fa-solid fa-users"></i>
-        </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium uppercase mb-3">User Experience</h2>
-          <p class="leading-relaxed text-base">Individuals who express a keen interest in the realm of User Experience (UX) within the context of website development dedicate their efforts to the creation of an optimal, efficient, and gratifying user experience.</p>
-        </div>
-      </div>
-      <div class="flex flex-col mb-10 lg:items-start items-center">
-        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-[#99EEBB] text-white  mb-5">
-          <i class="fa-regular fa-object-group"></i>
-        </div>
-        <div class="flex-grow">
-          <h2 class="text-gray-900 text-lg title-font font-medium uppercase mb-3">Web Design</h2>
-          <p class="leading-relaxed text-base">I find joy in the process of creating captivating, responsive user interfaces that cater to user needs. Creativity, a grasp of design principles, and proficiency in graphic design tools are key characteristics of individuals who enjoy in web design.</p>
-        </div>
-      </div>
+      }
     </div>
   </div>
     <div class="container px-5 py-8 mx-auto">
