@@ -1,20 +1,37 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { HighlightService } from '../shared/highlight.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink,RouterLinkActive],
+  imports: [RouterLink,RouterLinkActive, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
-
+export class NavbarComponent implements OnInit {
+  isBlinking = false;
   isScrolled = false;
 
   @HostListener('window:scroll', [])
     onWindowScroll() {
       this.isScrolled = window.scrollY > 20; // Adjust the scroll threshold as needed
+  }
+
+  constructor(private highlightService: HighlightService) {}
+
+  ngOnInit(): void {
+    this.highlightService.highlight$.subscribe(() => {
+      this.triggerBlinkAnimation();
+    });
+  }
+
+  triggerBlinkAnimation() {
+    this.isBlinking = true;
+    setTimeout(() => {
+      this.isBlinking = false;
+    }, 3000); // Animation lasts 3 seconds
   }
 
   // constructor() {

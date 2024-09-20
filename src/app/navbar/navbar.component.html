@@ -1,15 +1,32 @@
-<header [class.scrolled]="isScrolled"  class="navbar text-gray-600 body-font fixed top-0 w-full bg-white z-10">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a routerLink="/home"
-      class="flex  order-first lg:order-none lg:w-1/6 title-font font-medium items-center text-gray-900 lg:items-center justify-start lg:justify-center mb-4 ">
-      <img class="lg:w-full w-1/2" src="assets/img/logo.png" alt="image">
+<header [class.scrolled]="isScrolled" class="sidebar-navbar text-gray-600 body-font fixed left-0 h-full bg-white z-10 w-[15%] md:w-[5%]">
+  <div class="container mx-auto flex flex-col items-center p-5 h-full">
+    <a routerLink="/home" class="flex mb-4 w-full title-font font-medium items-center text-gray-900 justify-center">
+      <img class="w-full" src="assets/img/logo.png" alt="logo">
     </a>
-    <nav class="flex navigation-list lg:w-5/6 flex-wrap items-center text-base md:mx-auto justify-start md:justify-end">
-      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mr-5 text-lg transition ease-in-out duration-300">Home</a>
-      <a routerLink="/about"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page"  class="mr-5 text-lg transition ease-in-out duration-300">About</a>
-      <a routerLink="/web-projects"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mr-5 text-lg transition ease-in-out duration-300">Web Projects</a>
-      <a routerLink="/filter-projects"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mr-5 text-lg transition ease-in-out duration-300">Filter Projects</a>
-      <a routerLink="/social-media" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="text-lg transition ease-in-out duration-300">Social Media</a>
+    <nav class="flex flex-col navigation-list w-full items-center text-base justify-start flex-grow">
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mb-5 p-0 text-lg transition ease-in-out duration-300">
+        <i class="fa-solid fa-house"></i>
+      </a>
+      <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mb-5 text-lg transition ease-in-out duration-300">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a routerLink="/web-projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mb-5 text-lg transition ease-in-out duration-300">
+        <i class="fa-solid fa-globe"></i>
+      </a>
+      <a routerLink="/filter-projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page" class="mb-5 text-lg transition ease-in-out duration-300">
+        <i class="fa-solid fa-icons"></i>
+      </a>
+    </nav>
+    <nav class="flex flex-col items-center mt-auto navigation-list"> 
+      <a href="mailto:yusrihilmi4@gmail.com" class="text-lg transition ease-in-out duration-300" [ngClass]="{ 'pulse-blink': isBlinking }" target="_blank">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yusri-hilmi-387a57136/" class="text-lg transition ease-in-out duration-300" [ngClass]="{ 'pulse-blink': isBlinking }" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/6287824780507" class="text-lg transition ease-in-out duration-300" [ngClass]="{ 'pulse-blink': isBlinking }" target="_blank">
+        <i class="fa-brands fa-square-whatsapp"></i>
+      </a>
     </nav>
   </div>
 </header>

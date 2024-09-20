@@ -1,11 +1,12 @@
-.navigation-list a.active {
-  border-bottom: 2px solid #21ada8;
-  transition: border-bottom 0, 3 ease, color 0, 3 ease;
+.navigation-list a.active i{
+
+  color: #21ada8;
+  transition: all 500ms;
 }
 
 .navigation-list a:hover {
-  border-bottom: 2px solid #21ADA8;
-  transition: border-bottom 0, 3 ease, color 0, 3 ease;
+  color: #21ada8;
+  transition: all 500ms;
 }
 
 .navbar {
@@ -15,4 +16,52 @@
 
 .scrolled {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-navbar {
+  height: 100vh; /* Full height of the viewport */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px; /* Optional padding */
+}
+
+.sidebar-navbar .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.sidebar-navbar img {
+  max-width: 150px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+body {
+  margin-left: 10%;
+}
+
+.pulse-blink {
+  animation: pulse-blink-animation 1s ease-in-out infinite;
+}
+
+@keyframes pulse-blink-animation {
+  0% {
+    transform: scale(1);   
+    opacity: 1;  
+    color: none;          
+  }
+  50% {
+    transform: scale(1.2); 
+    opacity: 0.5;    
+    color: #21ada8;     
+  }
+  100% {
+    transform: scale(1);   
+    opacity: 1;            
+  }
 }

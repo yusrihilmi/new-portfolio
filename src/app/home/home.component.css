@@ -32,3 +32,47 @@
     animation: moveLoadingBar 10s linear infinite;
     /* Adjust the duration and timing function as needed */
   }
+
+  .background-video { /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; /* Cover the entire area */
+    z-index: -1; /* Send the video behind other content */
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust height as needed */
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
+    z-index: 1; /* Ensure it overlays the video */
+  }
+
+  .gradient-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust height as needed */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
+    z-index: 1; /* Ensure it overlays the video */
+  }
+  
+  .parallax {
+    height: 800px; /* Adjust based on how tall you want the parallax image section to be */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .background-content {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 20px; /* Add some padding inside the box */
+    border-radius: 10px; /* Slightly round the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+  }
