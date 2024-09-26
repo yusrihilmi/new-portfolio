@@ -1,11 +1,11 @@
 {
   "routes": [
     "/",
-    "/new-portfolio/about",
-    "/new-portfolio/filter-projects",
-    "/new-portfolio/home",
-    "/new-portfolio/social-media",
-    "/new-portfolio/web-projects",
-    "/new-portfolio/web-projects/greenchem"
+    "/about",
+    "/filter-projects",
+    "/home",
+    "/social-media",
+    "/web-projects",
+    "/web-projects/greenchem"
   ]
 }

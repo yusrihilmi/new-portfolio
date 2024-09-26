@@ -9,26 +9,26 @@ import { GreenchemComponent } from './greenchem/greenchem.component';
 
 export const routes: Routes = [
     {
-        'path': 'new-portfolio/home','title': 'YusriPortfolio | Home', component:HomeComponent
+        'path': 'home','title': 'YusriPortfolio | Home', component:HomeComponent
     },
     {
-        'path': 'new-portfolio/about', 'title': 'YusriPortfolio | About', component:AboutComponent
+        'path': 'about', 'title': 'YusriPortfolio | About', component:AboutComponent
     },
     {
-        'path': 'new-portfolio/web-projects', 'title': 'YusriPortfolio | Web Projects', component:WebProjectsComponent
+        'path': 'web-projects', 'title': 'YusriPortfolio | Web Projects', component:WebProjectsComponent
     },
     {
-        'path': 'new-portfolio/web-projects', children:[
+        'path': 'web-projects', children:[
             {
                 'path': 'greenchem', 'title': 'YusriPortfolio | Web Projects | Greenchem', component: GreenchemComponent
             }
         ]
     },
     {
-        'path': 'new-portfolio/filter-projects', 'title': 'YusriPortfolio | Filter Projects', component:FilterProjectsComponent
+        'path': 'filter-projects', 'title': 'YusriPortfolio | Filter Projects', component:FilterProjectsComponent
     },
     {
-        'path': 'new-portfolio/social-media', 'title': 'YusriPortfolio | Social Media', component:SocialMediaComponent
+        'path': 'social-media', 'title': 'YusriPortfolio | Social Media', component:SocialMediaComponent
     },
     {
         'path': '','title': 'YusriPortfolio | Home', component:HomeComponent
