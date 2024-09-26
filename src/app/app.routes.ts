@@ -9,7 +9,7 @@ import { GreenchemComponent } from './greenchem/greenchem.component';
 
 export const routes: Routes = [
     {
-        'path': 'home','title': 'YusriPortfolio | Home', component:HomeComponent
+        'path': '','title': 'YusriPortfolio | Home', component:HomeComponent
     },
     {
         'path': 'about', 'title': 'YusriPortfolio | About', component:AboutComponent
@@ -31,7 +31,7 @@ export const routes: Routes = [
         'path': 'social-media', 'title': 'YusriPortfolio | Social Media', component:SocialMediaComponent
     },
     {
-        'path': '','title': 'YusriPortfolio | Home', component:HomeComponent
+        'path': '','title': 'YusriPortfolio | Home', redirectTo: '/', pathMatch: "prefix"
     },
     {
         'path': '**', component:PageNotFoundComponent
