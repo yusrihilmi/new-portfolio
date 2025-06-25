@@ -3,8 +3,8 @@
         {
             "id": 1,
             "icon": "fa-solid fa-laptop-code",
-            "title": "Frontend Development",
-            "description": "Experienced in handling project in scope of research and web development as a frontend developer. I have basic knowledge on Laravel framework, Vue JS, Angular, React JS, Tailwind or Bootstrap CSS, and Jquery to build an Website."
+            "title": "Web Development",
+            "description": "Experienced in handling project in scope of research and web development as a web developer. I have knowledge on Laravel framework, PHP, Vue JS, Angular, React JS, Tailwind or Bootstrap CSS, and Jquery to build an Website."
         },
         {
             "id": 2,
@@ -14,9 +14,9 @@
         },
         {
             "id": 3,
-            "icon": "fa-regular fa-object-group",
-            "title": "Web Design",
-            "description": "I find joy in the process of creating captivating, responsive user interfaces that cater to user needs. Creativity, a grasp of design principles, and proficiency in graphic design tools are key characteristics of individuals who enjoy in web design."
+            "icon": "fa-solid fa-mobile-screen",
+            "title": "AR Filter Creator",
+            "description": "I design and develop interactive augmented reality experiences that blend creativity with technology, engaging users through platforms like Instagram and TikTok,"
         }
     ]
 }
