@@ -73,11 +73,11 @@ p.description {
 }
 
 .templates .template-block {
-    width: 470px;
-    height: 257px;
     background-size: cover;
     border-radius: 6px;
     overflow: hidden;
+    width: 100%;
+    height: 361px;
     /* box-shadow: var(--home-templates-block-shadow);
     border-left: var(--home-templates-block-border-left);
     border-bottom: var(--home-templates-block-border-bottom); */

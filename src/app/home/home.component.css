@@ -62,7 +62,6 @@
   }
   
   .parallax {
-    height: 800px; /* Adjust based on how tall you want the parallax image section to be */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
