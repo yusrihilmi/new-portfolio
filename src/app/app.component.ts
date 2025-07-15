@@ -1,11 +1,12 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
 import { timer } from 'rxjs';
+
+declare let gtag: Function; // ✅ Declare gtag to avoid TS error
 
 @Component({
   selector: 'app-root',
@@ -16,32 +17,41 @@ import { timer } from 'rxjs';
 })
 export class AppComponent {
   title = 'YusriPortfolio';
-  loading = false;  // Controls the display of the loading screen
+  loading = false;
 
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: object
   ) {
-    // Listen to routing events
     this.router.events.subscribe((event) => {
+      // Loading screen logic
       if (event instanceof NavigationStart) {
-        this.showLoadingScreen();  // Show loading screen on route start
-      } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        this.hideLoadingScreen();  // Hide loading screen on route end
+        this.showLoadingScreen();
+      } else if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
+        this.hideLoadingScreen();
+
+        // ✅ Track GA page views only in browser
+        if (isPlatformBrowser(this.platformId) && typeof gtag === 'function' && event instanceof NavigationEnd) {
+          gtag('config', 'G-T4XXQ8DSRY', {
+            page_path: event.urlAfterRedirects,
+          });
+        }
       }
     });
   }
 
   showLoadingScreen() {
     this.loading = true;
-    // Ensure loading screen stays for at least 2 seconds
     timer(500).subscribe(() => {
       this.loading = false;
     });
   }
 
   hideLoadingScreen() {
-    // Hide the loading screen after the 2-second delay
     timer(500).subscribe(() => {
       this.loading = false;
     });
