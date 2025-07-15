@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /new-portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:new-portfolio": "node dist/new-portfolio/server/server.mjs"
